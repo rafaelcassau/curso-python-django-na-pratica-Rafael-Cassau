@@ -10,3 +10,10 @@ class Library(models.Model):
 	friend_email = models.EmailField(max_length=50, blank=True, default='')
 	created_at  = models.DateTimeField(auto_now_add=True)
 
+	class Meta:
+		verbose_name = 'Livro'
+		verbose_name_plural = 'Livros'		
+
+	def __unicode__(self):
+		return self.title
+
